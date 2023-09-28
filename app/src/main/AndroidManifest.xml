@@ -2,9 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
 
     <application
-        android:name=".ui.theme.NewsApp"
+        android:name="presentation.newsapp.ui.theme.NewsApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,7 +18,7 @@
         android:theme="@style/Theme.NewsApp"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name="presentation.newsapp.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.NewsApp">
@@ -24,7 +27,24 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="newsapp-49524.firebaseapp.com"
+                    android:pathPrefix="/verification"
+                    android:scheme="https" />
+
+            </intent-filter>
+
         </activity>
+        <meta-data
+          android:name="com.google.android.gms.ads.APPLICATION_ID"
+          android:value="ca-app-pub-9481709154583117~7717570547"
+            />
     </application>
 
 </manifest>

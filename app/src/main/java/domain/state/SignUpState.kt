@@ -1,7 +1,7 @@
 package domain.state
 
 data class SignUpState(
-    val successful:String?=null,
-    val error:String?=null,
-    val isLoading:Boolean=false
+    var successful:Any?=null,
+    var error:Any?=null,
+    var isLoading:Boolean=false,
 )
