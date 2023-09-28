@@ -71,10 +71,10 @@ fun LoginScreen(
             if(emailError == null && passwordError == null){
                navigationScope.launch{
                    authViewModel.loginUser(userEmail, password)
-                   val user = SavingUserModel().apply {
-                       this.email = userEmail
-                       this.password = password
-                   }
+                   val user = SavingUserModel(
+                       email = userEmail,
+                       password = password
+                   )
                    delay(500)
                    localDataBaseViewModel.saveUserToLocalStorage(user)
                    delay(500)

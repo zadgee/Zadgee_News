@@ -12,9 +12,9 @@ data class SavingUserModel(
     @PrimaryKey
     val id:Int = 0,
     @ColumnInfo(EMAIL)
-    var email:String ="",
+    var email:String,
     @ColumnInfo(PASSWORD)
-    var password:String = ""
+    var password:String
 )
 
 

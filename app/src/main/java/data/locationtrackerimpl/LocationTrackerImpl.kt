@@ -17,7 +17,7 @@ import kotlin.coroutines.suspendCoroutine
 
 class LocationTrackerImpl @Inject constructor(
     private val fusedLocationProviderClient: FusedLocationProviderClient,
-    private val context: Context,
+    private val context: Context
 ):LocationTracker {
 
     override suspend fun getUserLocation():Location? {
@@ -92,4 +92,5 @@ class LocationTrackerImpl @Inject constructor(
             }
         }
      }
+
      }

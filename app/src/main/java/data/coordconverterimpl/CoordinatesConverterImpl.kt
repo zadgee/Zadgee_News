@@ -1,7 +1,5 @@
 package data.coordconverterimpl
-
 import android.util.Log
-import data.model.GeoCodingComponent
 import data.model.GeoCodingModel
 import domain.api.GeoCodingAPI
 import domain.coordinatesconverter.CoordinatesConverter
@@ -18,7 +16,6 @@ class CoordinatesConverterImpl@Inject constructor(
         if(!response.isSuccessful){
             Log.d("TAG","Error occurred: ${response.code()} && ${response.message()}")
         }
-
         return response
     }
 }
