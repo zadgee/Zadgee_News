@@ -1,4 +1,2 @@
-/**
-* Welcome, project is developing rn)
-* CU <3
-  */
+# News App
+Stack: Firebase (Authentication,Firestore), Clean Architecture, Kotlin, Compose, Paging, Coroutines, Room, Hilt.
